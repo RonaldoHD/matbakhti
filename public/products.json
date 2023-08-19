@@ -1,0 +1,122 @@
+{
+    "1": {
+      "name": "Meat Chopper",
+      "image": "meat.png",
+      "description": "3L Stainless Steel Electric Meat Chopper With Bi-Level Blades, 2 Speed Levels, 300W Multi Food Chopper For Meat, Vegetables, Fruits And Nuts",
+      "features": [
+        "Made of food grade stainless steel, strong and durable. Easy to clean.",
+        "3L large capacity, can meet the different needs of families.",
+        "Double-layer blades can effectively flip the ingredients and cut at multiple angles.",
+        "2 gear adjustment, freely adjust according to the softness and hardness of the food.",
+        "The low-noise design does not affect anyone's work and rest."
+      ],
+      "specifications": {
+        "Material": "food grade stainless steel",
+        "Voltage": "220V",
+        "Power": "250W",
+        "Capacity": "3L",
+        "Product size": "19cm×19cm×29cm"
+      },
+      "price": 165,
+      "discount_price": "225 SAR",
+      "promotion": "BUY TWO FOR 225 SAR ONLY! ",
+      "images": [
+        "meat.png",
+        "meat1.png",
+        "meat2.png",
+        "meat3.png",
+        "meat4.png",
+        "meat5.png"
+      ]
+    },
+    "2": {
+      "name": "Portable Juicer",
+      "image": "juice.png",
+      "description": "Hands-Free USB Charging Powerful Electric Juicer Cordless Fruit Juicer, 1 Button Easy Press Lemon Lime Orange Grapefruit Juice Squeezer for Kitchen Outdoor travel",
+      "features": [
+        "Anti-drip System: The juicer has a drip-proof design, the juice can be completely poured into the placed glass, you don't have to worry about the juice being wasted.",
+        "Easy to Clean: Comes with a cleaning brush that can be rinsed with water for convenience and is also dishwasher safe.",
+        "Auto-sensing: Automatic sensing peel thickness, maximum extraction of juice, to provide you with fresh and delicious juice every day."
+      ],
+      "specifications": {
+        "Material": "Food-grade ABS and AS materials",
+        "Power": "50W",
+        "Capacity": "0.6L",
+        "Product size": "11.18 x 13.72 x 23.88 cm; 1.17 Kilograms"
+      },
+      "price": 165,
+      "discount_price": "225 SAR",
+      "promotion": "BUY TWO FOR 225 SAR ONLY! ",
+      "images": [
+        "juice.png",
+        "juice1.png",
+        "juice2.png",
+        "juice3.png",
+        "juice4.png",
+        "juice5.png"
+      ]
+    },
+    "3": {
+      "name": "Vacuum Sealer",
+      "image": "vac.png",
+      "description": "Automatic Food Sealer for Dry/Moist Food, Vacuum Sealing with 10 Vacuum Sealer Bags for Kitchen",
+      "features": [
+        "Easy and convenient to operate in the kitchen.",
+        "It is a perfect way to preserve meat, seafood, fresh fruits and vegetables, and dried snacks.",
+        "Strong suction, moisture and dust proof.",
+        "Fashionable appearance design, quiet low noise.",
+        "Mini size and light weight make it easy to carry and space-saving."
+      ],
+      "specifications": {
+        "Color": "Black",
+        "Material": "ABS",
+        "Electric plug": "2 plugs",
+        "Rated voltage": "AC100V-240V/50-60Hz",
+        "Power": "90W",
+        "Degree of vacuum": "-60 Kpa",
+        "Package size": "375 * 85 * 70mm/14.8 * 3.3 * 2.8inches(Length * Width * Height)",
+        "Package weight": "629g/22.2 ounces"
+      },
+      "price": 139,
+      "discount_price": "189 SAR",
+      "promotion": "BUY TWO FOR 189 SAR ONLY! ",
+      "images": [
+        "vac.png",
+        "vac1.png",
+        "vac2.png",
+        "vac3.png",
+        "vac4.png",
+        "vac5.png"
+      ]
+    },
+    "4": {
+      "name": "Vegetable Chopper",
+      "image": "veg.png",
+      "description": "Garlic, Chili, Onion, Vegetables, Ginger Onions, Meat, Chopper Chopper Blender",
+      "features": [
+        "Automatically cut vegetables, Get fast and efficient results.",
+        "With it, you can have an electric vegetable slicer and an electric meat grinder at the same time, a multifunctional package."
+      ],
+      "specifications": {
+        "Name": "Electric Vegetable Cutter",
+        "Material": "ABS+PP+PC+stainless steel",
+        "Color": "green",
+        "Capacity": "200ml",
+        "Motor power": "40w",
+        "Rated voltage": "5 (V)",
+        "Rated power": "10 (W)"
+      },
+      "price": 129,
+      "discount_price": "169 SAR",
+      "promotion": "BUY TWO FOR 169 SAR ONLY! ",
+      "images": [
+        "veg.png",
+        "veg1.png",
+        "veg2.png",
+        "veg3.png",
+        "veg4.png",
+        "veg5.png"
+      ]
+    }
+  }
+  
