@@ -560,14 +560,14 @@
               </div>
               <div class="form-group mt-3">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" rows="10" id="message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Submitt</button></div>
+              <div class="text-center"><button type="submit" onclick="SendMailContact()">Submitt</button></div>
             </form>
           </div>
 
@@ -792,7 +792,23 @@ function SendMail() {
     };
 
     emailjs.send("service_x7nigaa", "template_28scrw7", params).then(function(res) {
-        alert("Success!" + res.status);
+        alert("Order Sent" + res.status);
+    });
+}
+
+
+
+function SendMailContact() {
+    
+    var params = {
+        order_name: document.getElementById('name').value,
+        order_email: document.getElementById('email').value,
+        order_phone: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+    };
+
+    emailjs.send("service_x7nigaa", "template_pg4jr4w", params).then(function(res) {
+        alert("Form Sent " + res.status);
     });
 }
 </script>
