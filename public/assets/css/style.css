@@ -13,6 +13,21 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #212529;
 }
+.parent {
+  border-top: 1px solid grey;
+  padding: 2rem 2rem;
+  text-align: center;
+  display: inline-flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.child {
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
 
 a {
   color: #ef4760;

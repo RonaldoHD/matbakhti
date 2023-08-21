@@ -27,6 +27,14 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("M-OByAH1z6A57nFVQ");
+})();
+</script>
   <!-- =======================================================
   * Template Name: Ninestars
   * Updated: Jul 27 2023 with Bootstrap v5.3.1
@@ -39,6 +47,21 @@
 <style>
   .title{
     margin-bottom: 5vh;
+}
+.parent {
+  border-top: 1px solid grey;
+  padding: 2rem 2rem;
+  text-align: center;
+  display: inline-flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.child {
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
 }
 .card{
     margin: auto;
@@ -142,28 +165,7 @@ input:focus::-webkit-input-placeholder
 {
       color:transparent;
 }
-.btn{
-    background-color: #000;
-    border-color: #000;
-    color: white;
-    width: 100%;
-    font-size: 0.7rem;
-    margin-top: 4vh;
-    padding: 1vh;
-    border-radius: 0;
-}
-.btn:focus{
-    box-shadow: none;
-    outline: none;
-    box-shadow: none;
-    color: white;
-    -webkit-box-shadow: none;
-    -webkit-user-select: none;
-    transition: none; 
-}
-.btn:hover{
-    color: white;
-}
+
 a{
     color: black; 
 }
@@ -198,7 +200,7 @@ a:hover{
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">Producta</a></li>
           <li><a class="nav-link scrollto" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"  >Cart</a></li>
-          <li><a class="getstarted scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="/#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -218,6 +220,8 @@ a:hover{
                 <div class="row">
                     <div class="col"><h4><b>My Cart</b></h4></div>
                     <div class="col align-self-center text-right text-muted">items</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
                 </div>
             </div>    
             <div class="row border-top border-bottom">
@@ -280,10 +284,51 @@ a:hover{
             <button class="btn">CHECKOUT</button>
         </div> -->
 
+        <div class="parent"  >
 
+          <div class="child" ><b>Total :</b> <p id="total" ></p></div>
+          <div class="child"  >
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Checkout
+            </button>
+          </div>
+         </div>
 </div>
 
 </body>
+
+  <!-- ======= Modal ======= -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Fill this form and our team will contact you</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="email" class="form-control" id="order_name"  placeholder="name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="order_email" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Phone</label>
+            <input type="email" class="form-control" id="order_phone" placeholder="Phone">
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-danger" onclick="SendMail()">Submitt</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ======= ModalEnd ======= -->
+
+
   <!--Sidebar End -->
   <main id="main">
 
@@ -339,7 +384,26 @@ a:hover{
       <strong>Quantity</strong><input class="quantity" type="number" id="quantity" value="1" >
       <div class="detailbuttons" >
        
-        <button class="action" onclick="addto()"   >Add to Cart</button>
+        <button  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="addto()"   >Add to Cart</button>
+
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Product added to cart
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="window.location.reload()" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
   
 
@@ -351,7 +415,7 @@ a:hover{
 
       </div>
     </section><!-- End Portfolio Details Section -->
-
+  
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -376,13 +440,10 @@ a:hover{
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Ninestars</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+            <h3>Matbakhti</h3>
+            <strong>Adress:</strong> Saudi Arabia, Riyadh<br>
+              <strong>Phone:</strong>  +966 11 510 7127<br>
+              <strong>Email:</strong>  Info@matbakhti.com<br>
             </p>
           </div>
 
@@ -393,30 +454,17 @@ a:hover{
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
+       
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.tiktok.com/@matbakhti" class="facebook"><i class="bx bxl-tiktok"></i></a>
+              <a href="https://instagram.com/matbakhti?igshid=MzRlODBiNWFlZA==" class="instagram"><i class="bi bi-instagram"></i></a>
             </div>
           </div>
 
@@ -427,7 +475,7 @@ a:hover{
   
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.link/mr4u2q" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -494,8 +542,6 @@ let cartItems = JSON.parse(sessionStorage.getItem('CartItems')) || [];
 cartItems.push({ image: data[productName].image ,name:  document.getElementById('ProductName').innerHTML,  qty :  document.getElementById('quantity').value ,price:  document.getElementById('ProductPrice').innerHTML* document.getElementById('quantity').value,});
 sessionStorage.setItem('CartItems', JSON.stringify(cartItems));
 
-alert('Added to cart');
-window.location.reload()
   })
 }
 
@@ -504,8 +550,9 @@ window.location.reload()
 
 
   const getitems = JSON.parse(sessionStorage.getItem('CartItems')) || [];
-
+ var total=0
 getitems.forEach((item, index) => {
+  total=total+item.price
   const newItemDiv = document.createElement('div');
   newItemDiv.classList.add('row', 'main', 'align-items-center');
   newItemDiv.innerHTML = `
@@ -537,7 +584,35 @@ getitems.forEach((item, index) => {
 
   });
 });
+document.getElementById('total').innerText=total+' SAR'
 
+
+  </script>
+
+<script>
+  function SendMail() {
+      var items = sessionStorage.getItem('CartItems');
+      console.log(items);
+  
+      var itemsArray = JSON.parse(items);
+      
+      var itemsContent = '';
+      itemsArray.forEach(item => {
+          itemsContent += `Item: ${item.name}, Price: ${item.price}  
+            `; // Use <br> for line breaks
+      });
+  
+      var params = {
+          order_name: document.getElementById('order_name').value,
+          order_email: document.getElementById('order_email').value,
+          order_phone: document.getElementById('order_phone').value,
+          message: itemsContent+'Total : '+document.getElementById('total').innerHTML,
+      };
+  
+      emailjs.send("service_x7nigaa", "template_28scrw7", params).then(function(res) {
+          alert("Success!" + res.status);
+      });
+  }
   </script>
 
 </body>

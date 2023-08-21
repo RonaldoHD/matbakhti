@@ -58,7 +58,7 @@
     },
     "3": {
       "name": "Vacuum Sealer",
-      "image": "vac.png",
+      "image": "vac1.png",
       "description": "Automatic Food Sealer for Dry/Moist Food, Vacuum Sealing with 10 Vacuum Sealer Bags for Kitchen",
       "features": [
         "Easy and convenient to operate in the kitchen.",
@@ -91,7 +91,7 @@
     },
     "4": {
       "name": "Vegetable Chopper",
-      "image": "veg.png",
+      "image": "veg1.png",
       "description": "Garlic, Chili, Onion, Vegetables, Ginger Onions, Meat, Chopper Chopper Blender",
       "features": [
         "Automatically cut vegetables, Get fast and efficient results.",
